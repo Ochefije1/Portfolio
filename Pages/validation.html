@@ -10,24 +10,21 @@
     <title>Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
 </head>
 
-<body onload="hideMenu()" class="bg-black">
+<body onload="hideMenu()" class="bg-[url('../Image/ccv.jpeg')] bg-no-repeat bg-cover max-h-full max-w-full">
     <header>
         <div class="flex gap-6">
             <div class="mr-0 w-24">
                 <h1><a class="text-blue-500 ml-10 text-2xl mt-6 font-bold" href="../index.html">A.S.O</a></h1>
             </div>
-            
+
         </div>
 
 
         <div class="">
-            <svg xmlns="<http://www.w3.org/2000/svg>" id="menu-button" class="h-6 w-6 cursor-pointer md:hidden block"
-                fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-            <ul class="flex justify-end text-red-500 grid grid-flow-col gap-4 p-3">
+                <ul class="flex justify-end text-red-500 grid grid-flow-col gap-4 p-3">
                 <li><a class="hover:bg-blue-300" href="../index.html">Home</a></li>
                 <li><a class="hover:bg-blue-300" href="../Pages/about.html">About</a></li>
                 <li><a class="hover:bg-blue-300" href="../Pages/skills.html">Skills</a></li>
@@ -43,57 +40,61 @@
 
     </header>
 
-    
+
     <!---GREETING-->
     <p id="checkTime" class="text-red-500 text-2xl font-bold">Greeting</p>
 
+    <div class="max-w-xl mx-auto   rounded-lg shadow-md overflow-hidden md:max-w-1xl px-">
+        <div class="md:flex">
+            <div class=" mx-auto bg-[url('../Image/validate.png')]">
+                <div class="text-center text-xl text-red-700 font-bold">PSTONE CREDIT CARD VALIDATION</div>
+              
+                    
+                        <form name="form1" action="#">
+                            <div class="p-6 rounded-lg shadow-lg">
+  
+                                <div class="flex-1 mr-2 mb-2">
+                                  
+                                  <input type="text" class="w-full p-2 border rounded-lg" placeholder="Holder Name">
+                                </div> 
+    
+                                <div class="flex-1 mr-2 mb-2">
+                                  <input type="text" class="w-full p-2 border rounded-lg" id="cardno" placeholder="Card Number">
+                                </div>
+                                
+                                <div class="flex-1 mr-2 mb-2">
+                                  <input type="text" class="w-full p-2 border rounded-lg" id="cardExpiry" placeholder="Expiry Date">
+                                </div>
 
-    <main class="container mx-auto p-10 gap-20">
-        <div class="flex flex-col justify-evenly md:flex-row my-5 m-5">
-            <div class="w-1/2 py-20">
-                <div class="bg-blue-500  text-white -m-10 p-3">
-                    <h4>Get in touch</h4>
-                    <br>Don’t hesitate to reach out with the contact information below.
-                    <br>I will be glad to hear from you.
-                    <h3 class="mt-4">Enter Your Name:</h3>
-                    <input text="text" name="Username" placeholder="Your name.." size="35" maxlength="35" value="">
-                    <h3 class="mt-4">Enter your Email:</h3>
-                    <input type="email" name="Email" placeholder="Your Email.." size="35" maxlength="35">
-                    <h3 class="mt-4">Please type a message:</h3>
-                    <textarea name="About" row="30" cols="37" placeholder="Type a message.."></textarea>
-                    <div class="text-center py-8 mt-2">
-                        <button type="button"
-                            class="inline-block rounded bg-primary px-6 pt-2.5 pb-2 text-xs font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] bg-black">
-                            SUBMIT
-                        </button>
-                    </div>
+                                <div class="flex-1 mr-2 mb-2">
+                                  <input type="text" class="w-full p-2 border rounded-lg" id="cardCcv" placeholder="CCV">
+                                </div> 
+                            </div>
+                          </form>
+
+                    <div class="flex justify-center">
+                        <input value="Verify" type="submit" onclick="ccValidation()" id="btn" class="px-4 py-3 mb-5 rounded-md bg-slate-600 w-f text-yellow-500 tracking-wide transition-all duration-300 ease-in-out hover:bg-green-300 
+            cursor-pointer disabled:cursor-not-allowed disabled:opacity-40" />
+
+            </div>
+            </div>
+
+            <div class="mr-14 pr-2 text-center rounded-md md:shrink-0 bg-gray-500">
+                <div class="grid grid justify-center">
+                    <img class="h-full md:w-24" src="../Image/Pstone.png" alt="Pstone">
                 </div>
 
-
+                <h4 class="items-center text-1xl text-white mt-10 font-bold">
+                    Welcome <br>PRECIOUS STONE <br> INNOVATION
+                </h4>
+                <p class="text-xl mt-20 text-red-500">
+                    Card Validation center
+                </p>
             </div>
-
-            <!-- Map -->
-            <div class="w-1/2 m-10">
-
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3963.734606136524!2d3.3898857741343087!3d6.555150593437944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8d6f6dc0e221%3A0xb6645428c88289b7!2s53%20Olaleye%20St%2C%20Gbagada%20105102%2C%20Lagos!5e0!3m2!1sen!2sng!4v1683789277317!5m2!1sen!2sng"
-                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade">
-                </iframe>
-
-            </div>
-
         </div>
-
-
-
-
-
-
-    </main>
-
-    <hr>
-     <!-- FOOTER -->
+    </div>
+    
+       <!-- FOOTER -->
 <footer class="bg-black">
     <div class="text-red-500">
         <div class="flex justify-evenly flex-col p-5 md:flex-row">
@@ -120,7 +121,10 @@
         </div>
     </div>
 </footer>
-    <script src="../JavaScript/portfolio.js"></script>
+<script src="../portfolio.js"></script>
+<script src="../JavaScript/validation.js"></script>
+
+
 </body>
 
 </html>
